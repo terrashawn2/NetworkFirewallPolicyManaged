@@ -1,8 +1,8 @@
 resource "aws_networkfirewall_firewall_policy" "testpolicy" {
 
-  name = "testpolicy"
+  name = var.fw_name
   tags = {
-    "Name" = "testfwpolicy"
+    "Environment" = var.fw_env
   }
 
 
