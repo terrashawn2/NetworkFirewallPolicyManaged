@@ -1,4 +1,4 @@
-resource "aws_networkfirewall_firewall_policy" "testpolicy" {
+resource "aws_networkfirewall_firewall_policy" "managed_rules_policy" {
 
   name = var.fw_name
   tags = {
