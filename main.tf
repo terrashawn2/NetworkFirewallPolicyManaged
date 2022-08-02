@@ -1,22 +1,8 @@
-terraform {
-  required_providers {
-    aws = {
-      source  = "hashicorp/aws"
-      version = "~>4.0"
-    }
-  }
-}
+resource "aws_networkfirewall_firewall_policy" "managed_rules_policy" {
 
-provider "aws" {
-  region = "us-east-1"
-}
-
-
-resource "aws_networkfirewall_firewall_policy" "testpolicy" {
-
-  name = "testpolicy"
+  name = var.fw_name
   tags = {
-    "Name" = "testfwpolicy"
+    "Environment" = var.fw_env
   }
 
 
